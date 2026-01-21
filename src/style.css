@@ -1,0 +1,54 @@
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --button-gradient: linear-gradient(45deg, #667eea, #764ba2);
+  --error-color: #dc3545;
+  --text-color: #333;
+  --text-secondary: #555;
+  --text-muted: #888;
+  --bg-light: #f8f9fa;
+  --border-color: #667eea;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  background: var(--primary-gradient);
+  min-height: 100vh;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.joke-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.joke-container:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 480px) {
+  .joke-container {
+    padding: 25px;
+  }
+}
